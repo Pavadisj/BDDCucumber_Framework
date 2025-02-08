@@ -24,7 +24,7 @@ public class LoginPage {
 	WebElement passwordNameField;
 
 	@FindBy(xpath = "//button[@type='submit']")
-	WebElement loginButton;
+	WebElement logiButton;
 
 	@FindBy(xpath = "//img[@alt='company-branding']")
 	WebElement companyLogo;
@@ -47,14 +47,14 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void enterUserName(String username) {
+	public void enteruserName(String username) {
 		userNameField.sendKeys(username);
 	}
 	public void enterPassword(String password) {
 		passwordNameField.sendKeys(password);
 	}
 	public void clickOnLoginButton(){
-		loginButton.click();
+		logiButton.click();
 	}
 	public void verifyDashboardPage(){
 		boolean imageDashBoard = dashBoardImage.isDisplayed();
